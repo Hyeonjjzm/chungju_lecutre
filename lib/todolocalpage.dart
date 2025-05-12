@@ -3,21 +3,21 @@ import 'package:flutter/material.dart';
 
 
 
-class Todolocalpage extends StatefulWidget {
-  const Todolocalpage({super.key});
+class TodoLocalPage extends StatefulWidget {
+  const TodoLocalPage({super.key});
 
   @override
-  State<Todolocalpage> createState() => _TodolocalpageState();
+  State<TodoLocalPage> createState() => _TodoLocalPageState();
 }
 
-class _TodolocalpageState extends State<Todolocalpage> {
-  
+class _TodoLocalPageState extends State<TodoLocalPage> {
+
   final TextEditingController _controller = TextEditingController();
-  
+
   void _addTodo(){
-    print("asdfgfds");
+    print("sadasda");
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,32 +25,32 @@ class _TodolocalpageState extends State<Todolocalpage> {
         title: const Text("로컬 To-Do"),
       ),
       body: Column(
-       children: [
-         Padding(
-             padding: const EdgeInsets.all(16),
-              child: Row(
-                children: [
-                  Expanded(
-                      child: TextField(
-                        controller: _controller,
-                        onSubmitted: (_) => _addTodo(),
-                        decoration: const InputDecoration(
-                          hintText: "할일을 입력하세요.",
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              children: [
+                Expanded(
+                    child: TextField(
+                      controller: controller,
+                      onSubmitted: () => _addTodo(),
+                      decoration: const InputDecoration(
+                          hintText: "할 일을 입력하세요",
                           border: OutlineInputBorder()
-                        ),
-                      )
-                  ), 
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      onPressed: _addTodo, 
-                      child: const Text('추가')
-                  )
-                ],
-              ),
-         )
-       ],
-        ),
+                      ),
+                    )
+                ),
+                const SizedBox(width: 10),
+                ElevatedButton(
+                    onPressed: _addTodo,
+                    child: const Text("추가")
+                )
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
+}
 }
