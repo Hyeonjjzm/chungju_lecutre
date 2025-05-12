@@ -14,22 +14,21 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title : const Text('To.DO 앱')),
+      appBar: AppBar(title: const Text("TO-DO 앱")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, "/todo-remote"),
+                onPressed: () => Navigator.pushNamed(context, "/todo-local"),
                 child: const Text("로컬 TO-DO")
             ),
             ElevatedButton(
                 onPressed: () => Navigator.pushNamed(context, "/todo-remote"),
                 child: const Text("클라우드 TO-DO")
-            ),
+            )
           ],
         ),
-        
       ),
     );
   }
